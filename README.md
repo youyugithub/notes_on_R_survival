@@ -23,4 +23,12 @@ range(calculate_AR_vector(mat1,ll3[1]))
 > expfit <- survreg(Surv(time, delta) ~ 1, data = sdat, dist = "exponential")
 > weibfit <- survreg(Surv(time, delta) ~ 1, data = sdat, dist = "weibull")
 > llogfit <- survreg(Surv(time, delta) ~ 1, data = sdat, dist = "loglogistic")
+
+> lambda <- exp(-coef(weibfit))
+> lambda
+(Intercept)
+1.987664
+> gamma <- 1 / weibfit$scale
+> gamma
+[1] 1.009752
 ```
