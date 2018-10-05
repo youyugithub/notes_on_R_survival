@@ -2,6 +2,9 @@
 notes on R survival
 
 ```
+Surv(time, event, origin)
+Surv(time, time2, event, origin)
+
 f <- rexp(1000, rate = 2)
 c <- rexp(1000)
 t <- pmin(f, c)
